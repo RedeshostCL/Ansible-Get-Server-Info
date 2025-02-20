@@ -1,0 +1,9 @@
+# {{ansible_facts['fqdn']}} Documentation
+
+## Description and details
+|Description | Detail |
+|------------|--------|
+| RAM | {{ ansible_memtotal_mb }} MB |
+| IP Address | {{ ansible_facts['default_ipv4']['address'] }} |
+| DNS | {{ ansible_dns['nameservers'] | join(' ') }} | 
+| Search Domains | {{ ansible_dns['search'] | join(' ')  }} |
