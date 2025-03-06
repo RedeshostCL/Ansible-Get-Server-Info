@@ -6,6 +6,7 @@
 | Hostname | {{ansible_facts['fqdn']}} |
 | OS | {{ ansible_distribution }}  {{ ansible_facts['lsb']['release'] }} |
 | Arch | {{ ansible_architecture }} | 
+| /dev/sda | {{ ansible_devices.sda.size }} |
 | RAM | {{ ansible_memtotal_mb }} MB |
 | IP Address | {{ ansible_facts['default_ipv4']['address'] }} |
 | DNS | {{ ansible_dns['nameservers'] | join(' ') }} | 
