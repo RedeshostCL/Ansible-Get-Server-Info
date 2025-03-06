@@ -1,0 +1,15 @@
+---
+- name: Creates MD file with basic info of hosts
+  hosts: all
+  become: true
+  vars:
+    temp_location: "/tmp/{{ ansible_facts['hostname'] }}_info.md"
+  vars_prompt:
+
+  tasks:
+
+  - name: Generate template
+    template:
+      src: index.j2
+      dest: "{{ temp_location }}"
+    delegate_to: localhost
