@@ -3,9 +3,10 @@
 ## Description and details
 |Description | Detail |
 |------------|--------|
+| Hostname | {{ansible_facts['fqdn']}} |
+| OS | {{ ansible_distribution }}  {{ ansible_facts['lsb']['release'] }} |
+| Arch | {{ ansible_architecture }} | 
 | RAM | {{ ansible_memtotal_mb }} MB |
 | IP Address | {{ ansible_facts['default_ipv4']['address'] }} |
 | DNS | {{ ansible_dns['nameservers'] | join(' ') }} | 
 | Search Domains | {{ ansible_dns['search'] | join(' ')  }} |
-| OS | {{ ansible_distribution }}  {{ ansible_facts['lsb']['release'] }} |
-| Arch | {{ ansible_architecture }} | 
