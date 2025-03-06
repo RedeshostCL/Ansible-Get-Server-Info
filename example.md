@@ -7,3 +7,5 @@
 | IP Address | 200.X.X.X |
 | DNS | 192.X.X.X |
 | Search Domains | redeshost.cl |
+| OS | Ubuntu  24.04 |
+| Arch | x86_64 |
